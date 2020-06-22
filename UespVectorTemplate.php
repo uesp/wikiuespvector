@@ -31,34 +31,11 @@ require_once "skins/Vector/VectorTemplate.php";
 class UespVectorTemplate extends VectorTemplate {
 	function execute() {
 		$sn = $this->get('sitenotice');
-		$this->set('sitenotice', "<div id='topad'><div class='center' id='uespTopBannerAd' style='margin:0 auto;'><div id='cdm-zone-01'></div></div></div>$sn");
+		$this->set('sitenotice', "<div id='topad'><div class='center' id='uespTopBannerAd' style='margin:0 auto;'><div id='uesp_D_1'></div></div></div>$sn");
 		parent::execute();
 	}
 	
 	function printTrail() {
-		?>
-<!-- BEGIN UESP -->
-	<div id='cdm-zone-end'></div>
-	
-<!-- Begin comScore -->
-<script>
-	var _comscore = _comscore || [];
-	_comscore.push({ c1: "2", c2: "6035118" });
-	(function() {
-	   var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-	   s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-	   el.parentNode.insertBefore(s, el);
-	})();
-</script>
-<noscript>
-   <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6035118&amp;cv=2.0&amp;cj=1" />
-</noscript>
-<!-- End comScore -->
-
-<!-- Nielsen Online SiteCensus -->
-       <div><img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-603339h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" /></div>
-<!-- End Nielsen Online SiteCensus -->
-<!-- END UESP --><?php
 		parent::printTrail();
 	}
 	protected function renderPortal( $name, $content, $msg = null, $hook = null ) {
@@ -125,8 +102,8 @@ class UespVectorTemplate extends VectorTemplate {
 		parent::renderPortals( $sidebar );
 		?>
 		<div class='portlet'>
-			<div id='cdm-zone-07'></div>
-		</div><div class='visualClear'></div></div></div><div style='padding-left:11em; width:300px; height:250px; margin:0 auto;'><div id='cdm-zone-02'></div></div><div><div>
+			<div id='uesp_D_2'></div>
+		</div><div class='visualClear'></div></div></div><div style='padding-left:11em; width:300px; height:250px; margin:0 auto;'><div id='uesp_D_3'></div></div><div><div>
 <?php
 	}
 }
