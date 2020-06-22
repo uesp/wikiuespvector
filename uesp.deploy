@@ -1,0 +1,18 @@
+name = uesp.wikiuespvector
+description = MediaWiki skin based on Vector.
+repository = https://github.com/uesp/wikiuespvector.git
+backup = false
+verbosity = 0
+
+staged = true
+
+ignore = *.deploy
+ignore = .hg*
+ignore = .git*
+
+dest = content1.uesp.net:/home/uesp/www/w/skins/UespVector/
+dest = content2.uesp.net:/home/uesp/www/w/skins/UespVector/
+dest = content3.uesp.net:/home/uesp/www/w/skins/UespVector/
+destname = [backup]backup1.uesp.net:/home/uesp/www/w/skins/UespVector/
+destname = [dev]content3.uesp.net:/home/uesp/dev/www/w/skins/UespVector/
+
