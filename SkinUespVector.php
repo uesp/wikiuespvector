@@ -26,7 +26,7 @@
  * SkinTemplate class for Vector skin
  * @ingroup Skins
  */
-require_once "skins/Vector/SkinVector.php";
+require_once "skins/Vector/includes/SkinVector.php";
 
 class SkinUespVector extends SkinVector {
 	public $skinname = 'uespvector';
