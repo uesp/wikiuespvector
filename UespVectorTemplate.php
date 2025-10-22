@@ -26,7 +26,7 @@
  * QuickTemplate class for Vector skin
  * @ingroup Skins
  */
-require_once "skins/Vector/VectorTemplate.php";
+require_once "skins/Vector/includes/VectorTemplate.php";
 
 class UespVectorTemplate extends VectorTemplate {
 	function execute() {
@@ -80,7 +80,9 @@ class UespVectorTemplate extends VectorTemplate {
 							echo $this->makeListItem( $key, $val );
 						}
 						if ( $hook !== null ) {
-							wfRunHooks( $hook, array( &$this, true ) );
+							// Avoid PHP 7.1 warning
+							$skin = $this;
+							Hooks::run( $hook, [ &$skin, true ] );
 						}
 						?>
 					</ul>
@@ -99,7 +101,7 @@ class UespVectorTemplate extends VectorTemplate {
 	}
 
 	// Same fugly hack as UespMonobook for footer ad, just moved to a different place.
-	function renderPortals( $sidebar ) {
+	function renderPortals( array $sidebar ) {
 		parent::renderPortals( $sidebar );
 		?>
 		<div class='portlet'>
